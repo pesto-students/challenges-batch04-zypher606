@@ -6,5 +6,8 @@ describe('Use Math functions', () => {
     expect(power(2, 4)).toBe(16);
     expect(power(9, 2)).toBe(81);
     expect(round(7.4)).toBe(7);
+    expect(round(7.5)).toBe(8);
+    expect(round(7.49999)).toBe(7);
+    expect(round(7.51)).toBe(8);
   });
 });
