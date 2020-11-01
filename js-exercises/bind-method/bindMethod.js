@@ -1,6 +1,5 @@
-// You can change the `args`
-function bind(...args) {
-  return args;
+function bind(fxn, obj) {
+  return fxn.bind(obj);
 }
 
 module.exports = { bind };
