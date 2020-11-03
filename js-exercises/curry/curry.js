@@ -4,7 +4,8 @@ function curry(fxn) {
       return fxn(...args1);
     }
 
-    return (...args2) => curryHandle.apply(this, [...args1, ...args2]);
+    // return (...args2) => curryHandle.apply(this, [...args1, ...args2]);
+    return (...args2) => curryHandle(...args1, ...args2);
   };
 }
 
