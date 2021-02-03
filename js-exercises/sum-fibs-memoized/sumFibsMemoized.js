@@ -11,11 +11,11 @@ function sumFibs(num) {
   return dp.filter(i => i % 2 === 1).reduce((a, b) => a + b, 0);
 }
 
-const result = {};
-function cacheFunction() {
+function cacheFunction(cacheFxn) {
+  const cache = {};
   return (num) => {
-    if (!result[num]) result[num] = sumFibs(num);
-    return result[num];
+    if (!(num in cache)) cache[num] = cacheFxn(num);
+    return cache[num];
   };
 }
 
