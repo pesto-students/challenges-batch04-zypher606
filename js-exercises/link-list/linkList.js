@@ -38,7 +38,8 @@ export default class LinkList {
     let pointer = this.head;
 
     while (pointer) {
-      console.log('Traversed item =======>', pointer.value);
+      // console.log('Traversed item =======>', pointer.value);
+      // Do nothing
       pointer = pointer.next;
     }
   }
